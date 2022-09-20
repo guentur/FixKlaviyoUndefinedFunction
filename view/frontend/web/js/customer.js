@@ -6,7 +6,7 @@ define([
     'use strict';
     var _learnq = window._learnq || [];
 
-    // customerData.getInitCustomerData().done(function () {
+    customerData.getInitCustomerData().done(function () {
         var customer = customerData.get('customer');
 
         if(_.has(customer(), 'email') && customer().email && !_learnq.isIdentified()) {
@@ -16,5 +16,5 @@ define([
                 '$last_name':  _.has(customer, 'lastname') ? customer.lastname : ''
             });
         }
-    // });
+    });
 });
